@@ -1,0 +1,11 @@
+'use strict';
+
+var issues = require('../controllers/issues');
+
+module.exports = function(app) {
+
+    // Home route
+
+    app.route('/issues',issues.list);
+
+};
