@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../public/css/animate.css">
     <link rel="stylesheet" href="../../public/css/templatemo_misc.css">
     <link rel="stylesheet" href="../../public/css/templatemo_style.css">
+    <link rel="stylesheet" href="../../public/css/colorbox.css">
 
     <script src="../../public/js/vendor/modernizr-2.6.2.min.js"></script>
 
@@ -131,9 +132,19 @@
 	      {% for idea in ideas %}
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
-                        <span class=""><img src="{{idea['idea']['image']}}" /></span>
+                        <a class='inline' href="#inline_content"><span class=""><img src="{{idea['idea']['image']}}" /></span></a>
+			<!-- This contains the hidden content for inline calls -->
+			<div style='display:none'>
+			  <div id='inline_content' style='padding:10px; background:#fff;'>
+
+			    <h1>{{idea['idea']['title']}}</h1>
+			    <p>{{idea['idea']['Body']}}  </p>
+
+			    </div>
+			  </div>
+
                         <h3>{{idea['idea']['title']}}</h3>
-                        <p>{{idea['idea']['Body']}}.</p>
+                        <p>{{idea['idea']['Description']}}.</p>
                     </div> <!-- /.service-item -->
                 </div> <!-- /.col-md-3 -->
 		{% endfor %}
@@ -206,6 +217,8 @@
     <script src="../../public/js/bootstrap.js"></script>
     <script src="../../public/js/plugins.js"></script>
     <script src="../../public/js/main.js"></script>
+    <script src="../../public/js/jquery.colorbox.js"></script>
+    <script src="../../public/js/colorbox.js"></script>
     <!--  Free HTML5 Template by http://www.templatemo.com -->
 </body>
 </html>
