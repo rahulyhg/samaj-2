@@ -594,7 +594,7 @@ h6 {
 }
 .product-item .item-thumb .overlay .overlay-inner a.view-detail {
   position: relative;
-  margin-top: 45%;
+  margin-top: 25%;
   display: block;
   background: url(../images/active-state.png) no-repeat;
   background-position: center 20px;
