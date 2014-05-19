@@ -1,11 +1,12 @@
 {% extends 'layouts/default.html' %}
 {% block content %}
 
-<h2> list of issues here </h2>
-    {{username}}
+<h2>{{issues['title']}} </h2>
+<img src ="http://10.11.1.29:8082/sites/default/files/{{issues['field_issue_image']['und'][0]['filename']}}" width = "100" height = "113" />
+{{issues['body']['und'][0]['value']}}
+
+
+
+
     <section data-ui-view />
-    <script type="text/javascript">
-        window.user = {{user|safe}};        
-        window.modules = {{modules|safe}};      
-    </script>
 {% endblock %}
